@@ -1,0 +1,10 @@
+pipeline {
+    agent any 
+    stages {
+        stage('github-fetch') { 
+            steps {
+                git branch: 'main', credentialsId: 'github_token', url: 'https://github.com/KS-bluehero/Vue3_1st.git'
+            }
+        }
+    }
+}
